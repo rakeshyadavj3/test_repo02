@@ -10,7 +10,6 @@ resource "aws_vpc" "cgvpc" {
 }
 
 # SUBNET CREATION
-
 #Public Subnet
 resource "aws_subnet" "pubsubnet" {
   vpc_id     = aws_vpc.cgvpc.id

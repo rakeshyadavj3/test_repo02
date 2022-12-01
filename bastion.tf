@@ -22,7 +22,6 @@ resource "aws_security_group" "bastion" {
       Name = "${var.envname}-bastion-sg"
   }
 }
-
 #Key pair value for creating EC2
 resource "aws_key_pair" "cg" {
   key_name   = "petclinic-key"
