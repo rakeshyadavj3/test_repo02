@@ -38,8 +38,8 @@ data "template_file" "user_data" {
 
 #Creating EC2 instance
 resource "aws_instance" "tomcat" {
-  ami = var.ami
-  instance_type = var.instance_type
+  ami = "ami-03f4fa076d2981b45"
+  instance_type = "t2.micro"
   subnet_id = aws_subnet.privatesubnet.id
   key_name = aws_key_pair.cg.id
   vpc_security_group_ids = ["${aws_security_group.tomcat.id}"]
