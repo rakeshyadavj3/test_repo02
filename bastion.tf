@@ -30,7 +30,7 @@ resource "aws_key_pair" "cg" {
 
  #Creating EC2 instance
  resource "aws_instance" "bastion" {
-  ami = var.ami
+  ami = "ami-03f4fa076d2981b45"
   instance_type = var.instance_type
   subnet_id = aws_subnet.pubsubnet.id
   key_name = aws_key_pair.cg.id
