@@ -24,8 +24,8 @@ resource "aws_security_group" "bastion" {
 }
 #Key pair value for creating EC2
 resource "aws_key_pair" "cg" {
-  key_name   = "petclinic-key"
-  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCs3svYc0xPZ5/VdcKUJIXtdtPTdT97qzlvAY3VRJbIy99MttxP3jMafQBu4jUfIdgsycavZ1r1/tiLyZEC9G5JQR+UpECDhgs82R1R+lJ1B5B4eI/JOKvjeUa07cJbsQf6MPwsjPrGNl9brunSYa5RUf/uGFZ9HB+A0tapAkAmaaK++eG8qwEVa5AOOtuMokUNNa4mp5MbgaGRyCmBUAjdPFPvapwVY2ZUkgWxtwAVaWfgFeoE4Mr5kEGaEM7QKBCyrWJXUdm94xUG/mF80XLdRSbIpCenXk5X0jBFwyGwBjkpOabhzNSNTEeALvxWAweKQV6ChivE60l/mRZLJl+03OEaUnxkCN4NzB38g1d+l/nJa8aQsfut8aUwFb3Af7JRHSpeU6q77Ot2YmMTJuJ70JzSXPYwr4Dl07AE1JSqr+1GonG8PEN/16YtqeomtD4Rmv4Vji38ppOA86l7bY68t3NKHfWXLV2/R31BmSZGlagwBkdoR40Enhd7vWrG+3c= Dell@DESKTOP-L2VAA49"
+  key_name   = "cg-key"
+  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCSBC1Bt4cp5tK8KdNQyp0JAOZB6hJbZk+6XH2uJFA4t3RC2XYSrPOnyHyS7UTjmxI7NopfcKbaBJ3DTf+7NDDP7iKNviEOhx40Fu1yhBT+kkbDhMBJuqCcSJ03s7r8HHjJZ/fPGAxUjW4llT1RumbgyyZrRsHr4Gl4o1a1QtLtH4tUxiU08NJyVxiYe+J6tDyqdvTm6URU0WzAiHNvmalO6tzIN59bVYVBlm/pYiZPaZ619nI8R7t8qL98gTbjY/ncKYdjQYQKZkQ2t7zCrPpcN8bKzGU2YB4WcGSvRjya4BzQrz0897c9p39xzvE/uGDkQhUbNpQqEBr+wPtwmYLn
 }
 
  #Creating EC2 instance
