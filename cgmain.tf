@@ -14,7 +14,7 @@ resource "aws_vpc" "cgvpc" {
 resource "aws_subnet" "pubsubnet" {
   vpc_id     = aws_vpc.cgvpc.id
   cidr_block = var.pubsubnet
-  availability_zone = var.azs
+  availability_zone = ["ap-south-1a"]
   map_public_ip_on_launch = true
   tags = {
     Name = "${var.envname}-pubsubnet"
@@ -25,7 +25,7 @@ resource "aws_subnet" "pubsubnet" {
 resource "aws_subnet" "privatesubnet" {
   vpc_id     = aws_vpc.cgvpc.id
   cidr_block = var.privatesubnet
-  availability_zone = var.azs
+  availability_zone = ["ap-south-1a"]
 
   tags = {
     Name = "${var.envname}-privatesubnet"
