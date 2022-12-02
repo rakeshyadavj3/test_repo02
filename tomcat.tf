@@ -31,10 +31,6 @@ resource "aws_security_group" "tomcat" {
   }
 }
 
-#User Data Template using Terraform
-data "template_file" "user_data" {
-  template = "${file("tomcat_install.sh")}"
-}
 
 #Creating EC2 instance
 resource "aws_instance" "tomcat" {
@@ -43,7 +39,6 @@ resource "aws_instance" "tomcat" {
   subnet_id = aws_subnet.privatesubnet.id
   key_name = aws_key_pair.cg.id
   vpc_security_group_ids = ["${aws_security_group.tomcat.id}"]
-  user_data = data.template_file.user_data.rendered
 
   tags = {
     Name = "${var.envname}-tomcat"
