@@ -1,6 +1,6 @@
 #creating VPC for dev env
 resource "aws_vpc" "cgvpc" {
-  cidr_block       = var.cidr
+  cidr_block       = "10.1.0.0/16"
   instance_tenancy = "default"
   enable_dns_hostnames = "true"
 
