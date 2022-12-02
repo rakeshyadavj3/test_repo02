@@ -31,7 +31,7 @@ resource "aws_key_pair" "cg" {
  #Creating EC2 instance
  resource "aws_instance" "bastion" {
   ami = "ami-03f4fa076d2981b45"
-  instance_type = var.instance_type
+  instance_type = "t2.micro"
   subnet_id = aws_subnet.pubsubnet.id
   key_name = aws_key_pair.cg.id
   vpc_security_group_ids = ["${aws_security_group.bastion.id}"]
