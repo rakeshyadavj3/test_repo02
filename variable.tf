@@ -1,4 +1,3 @@
-variable "cidr" {}
 variable "envname" {
   type = string
   default = "cg-assignment"
