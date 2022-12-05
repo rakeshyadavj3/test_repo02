@@ -1,3 +1,3 @@
 output "cg" {
-    instance_id = aws_instance.bastion.id
+    instance_id = "${aws_instance.bastion.id}"
 }
