@@ -1,3 +1,3 @@
 output "cg" {
-    value = "${aws_instance.bastion.id}"
+    value = "${aws_instance.bastion.public_ip}"
 }
