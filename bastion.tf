@@ -22,17 +22,14 @@ resource "aws_security_group" "bastion" {
       Name = "${var.envname}-bastion-sg"
   }
 }
-#Key pair value for creating EC2
-resource "aws_key_pair" "cg" {
-  key_name   = "sj"
-  }
+
 
  #Creating EC2 instance
  resource "aws_instance" "bastion" {
   ami = "ami-062df10d14676e201"
   instance_type = "t2.micro"
   subnet_id = aws_subnet.pubsubnet.id
-  key_name = aws_key_pair.cg.id
+  key_name = "sj"
   vpc_security_group_ids = ["${aws_security_group.bastion.id}"]
 
   tags = {
