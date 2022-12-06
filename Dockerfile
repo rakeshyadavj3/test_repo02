@@ -1,6 +1,8 @@
 #FROM nginx:latest
-FROM alpine:3.14
-RUN watch date >> /var/log/date.log
+FROM ubuntu:20.04
+#RUN watch date >> /var/log/date.log
 WORKDIR /tmp
-RUN "git clone https://github.com/rakeshyadavj3/cg.git \
-     && cd /tmp/cg"
+RUN apt-get -y update
+RUN apt-get -y install git
+RUN git clone https://github.com/rakeshyadavj3/cg.git
+RUN cd /tmp/cg
